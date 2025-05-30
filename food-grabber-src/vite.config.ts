@@ -1,8 +1,13 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from "vite";
 
-export default defineConfig({
-  base: './',
-  build: {
-    outDir: '../food-grabber',
-  },
+export default defineConfig(({ mode }) => {
+  const isDebugBuild = mode === "debug";
+
+  return {
+    base: "./",
+    build: {
+      outDir: "../food-grabber",
+      minify: isDebugBuild ? false : "esbuild", // Disable minify for debug mode
+    },
+  };
 });

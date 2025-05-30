@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "vite build"
+    "build": "vite build --emptyOutDir",
+    "build-debug": "vite build --mode debug --emptyOutDir"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ron B. Yeh",
+  "license": "Apache-2.0",
   "dependencies": {
     "phaser": "^3.90.0"
   },

@@ -91,7 +91,14 @@ export class GameScene extends Phaser.Scene {
     this.foodItemGroup.getChildren().forEach(item => {
       const foodItem = item as FoodItem;
       if (foodItem.y > this.cameras.main.height + foodItem.height) {
-        if (foodItem.active) foodItem.destroy();
+        if (foodItem.active) {
+          // Check if the missed item is the current target
+          if (foodItem.type === this.currentTargetType) {
+            console.log(`Missed target! Type: ${foodItem.type}. Game Over.`);
+            this.triggerGameOver(foodItem); // Pass the missed item
+          }
+          foodItem.destroy();
+        }
       }
     });
   }

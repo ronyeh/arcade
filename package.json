@@ -1,0 +1,17 @@
+{
+  "name": "arcade.us.com",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter food-grabber-src run build",
+    "build-debug": "pnpm --filter food-grabber-src run build-debug",
+    "test": "pnpm --filter food-grabber-src run test"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "author": "Ron B. Yeh",
+  "license": "Apache-2.0"
+}

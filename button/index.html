@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Button</title>
+    <style>
+      body {
+        background-color: #34295e; /* Dark Purple */
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Make the body take up the full viewport height */
+      }
+
+      button {
+        background-color: #6a5acd; /* A slightly lighter purple for contrast */
+        color: black;
+        padding: 15px 30px;
+        border: none;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #584b96; /* Darker purple on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton">Click Me</button>
+
+    <script>
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function () {
+          alert("YAY!");
+        });
+    </script>
+  </body>
+</html>

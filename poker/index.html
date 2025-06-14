@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Game</title>
+  <script type="module" crossorigin src="./assets/index-CR9YckT7.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C8f2qda3.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- SVG will be injected here -->
+    </div>
+
+    <div id="network-controls" style="position: absolute; top: 10px; left: 10px; background: #f0f0f0; padding: 15px; border-radius: 8px; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <h4>Multiplayer Setup</h4>
+        <button id="initiateGame">Initiate Game</button>
+        <p>Your Offer/Answer Signal:</p>
+        <textarea id="outgoingSignal" readonly rows="4" cols="45"></textarea>
+        <p>Peer's Signal:</p>
+        <textarea id="incomingSignal" rows="4" cols="45"></textarea>
+        <button id="connectToSignal">Connect to Signal</button>
+        <p id="connectionStatus">Status: Not Connected</p>
+    </div>
+
+    <div id="action-controls" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); padding: 15px; border-radius: 8px; z-index: 100; display: flex; align-items: center; gap: 10px;">
+        <input type="number" id="betAmountInput" placeholder="Amount" style="width: 80px; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+        <button class="action-button" id="foldButton">Fold</button>
+        <button class="action-button" id="checkButton">Check</button>
+        <button class="action-button" id="callButton">Call</button>
+        <button class="action-button" id="betButton">Bet</button>
+        <button class="action-button" id="raiseButton">Raise</button>
+        <p id="playerTurnIndicator" style="color: white; margin-left: 15px;">Player's Turn</p>
+    </div>
+
+</body>
+</html>

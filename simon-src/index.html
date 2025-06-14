@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says - Memory Game</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+    <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Simon Says</h1>
+            <div id="score-display">
+                <span>Round: <span id="round">0</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+                <span>Score: <span id="score">0</span></span>
+            </div>
+        </header>
+        
+        <div id="game-area">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        
+        <div id="bonus-panel" class="hidden">
+            <h3>Bonus Round!</h3>
+            <p>Choose your bonus:</p>
+            <button id="bonus-life" class="bonus-btn">Extra Life</button>
+            <button id="bonus-hint" class="bonus-btn">Hint</button>
+            <button id="bonus-fifty" class="bonus-btn">50/50</button>
+        </div>
+        
+        <div id="game-over" class="hidden">
+            <h2>Game Over!</h2>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <p>Rounds Completed: <span id="final-round">0</span></p>
+            <button id="restart-btn">Play Again</button>
+        </div>
+        
+        <div id="instructions">
+            <h3>How to Play</h3>
+            <p>Watch the sequence, then repeat it!</p>
+            <p>Use keyboard: <strong>F</strong> (top-left), <strong>D</strong> (bottom-left), <strong>J</strong> (top-right), <strong>K</strong> (bottom-right)</p>
+            <p>Or click/tap the colored squares</p>
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
+    
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

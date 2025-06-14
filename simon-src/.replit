@@ -1,0 +1,32 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Simon Says Game"
+
+[[workflows.workflow]]
+name = "Simon Says Game"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm install esbuild && node build.js && node serve.js"
+waitForPort = 5000
+
+[deployment]
+run = ["sh", "-c", "npm install esbuild && node build.js && node serve.js"]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
